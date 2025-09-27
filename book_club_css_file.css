@@ -1,0 +1,151 @@
+/* Custom CSS for Long Division Book Club Registration Form */
+
+.book-card {
+    transition: all 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.savings-badge {
+    animation: pulse 2s infinite;
+}
+
+/* Additional custom styles */
+.book-card.selected {
+    border-color: #6366f1 !important;
+    background-color: #eef2ff !important;
+}
+
+/* Smooth transitions for form elements */
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+select, 
+textarea {
+    transition: all 0.2s ease;
+}
+
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+input[type="tel"]:focus, 
+select:focus, 
+textarea:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+}
+
+/* Button hover effects */
+button[type="submit"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+/* Custom checkbox styles */
+input[type="checkbox"]:checked {
+    background-color: #6366f1;
+    border-color: #6366f1;
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+    .book-card {
+        margin-bottom: 1rem;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .text-4xl {
+        font-size: 2rem;
+    }
+}
+
+/* Loading state for button */
+.button-loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.button-loading:after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Pulse animation for savings badge */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+/* Form validation styles */
+.error {
+    border-color: #ef4444 !important;
+    background-color: #fef2f2 !important;
+}
+
+.error-message {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Success states */
+.success {
+    border-color: #10b981 !important;
+    background-color: #f0fdf4 !important;
+}
+
+/* Custom scrollbar for textarea */
+textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Print styles */
+@media print {
+    .bg-gradient-to-br {
+        background: white !important;
+    }
+    
+    .shadow-xl {
+        box-shadow: none !important;
+    }
+    
+    button {
+        display: none !important;
+    }
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Long Division Book Club Registration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <div class="max-w-4xl mx-auto p-6">
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+            <!-- Header -->
+            <div class="text-center mb-8">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-indigo-600 text-white rounded-full mb-4">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                    </svg>
+                </div>
+                <h1 class="text-3xl font-bold text-gray-900 mb-2">Long Division Book Club</h1>
+                <p class="text-gray-600">The Journey From One to Oneness - Join our transformative reading community</p>
+            </div>
+
+            <form id="registrationForm">
+                <!-- Personal Information -->
+                <div class="bg-gray-50 rounded-lg p-6 mb-8">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                        </svg>
+                        Personal Information
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Full Name *
+                            </label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                                placeholder="Enter your full name"
+                            />
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Email Address *
+                            </label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                                placeholder="your.email@example.com"
+                            />
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Phone Number
+                            </label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                                placeholder="(555) 123-4567"
+                            />
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Membership Type *
+                            </label>
+                            <select
+                                id="membershipType"
+                                name="membershipType"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                            >
+                                <option value="long-division-club">Long Division: The Journey From One to Oneness (Book-Club) - $0.00</option>
+                                <option value="monthly">Monthly - $9.99/month</option>
+                                <option value="annual">Annual - $99.99/year (Save 17%)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Selection -->
+                <div class="bg-gray-50 rounded-lg p-6 mb-8">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                        Long Division Book & Workbook Selection
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <!-- Book 1 -->
+                        <div id="book-1" class="book-card border-2 rounded-lg p-4 cursor-pointer transition-all border-gray-200 bg-white hover:border-gray-300" onclick="selectBook(1)">
+                            <div class="text-center">
+                                <div class="text-4xl mb-3">📖</div>
+                                <div class="text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full mb-2 inline-block">
+                                    Book
+                                </div>
+                                <h3 class="font-semibold text-sm text-gray-900 mb-1 leading-tight">Long Division: The Journey From One to Oneness</h3>
+                                <p class="text-xs text-gray-600 mb-3">by Kevin D. Franklin</p>
+                                <p class="text-lg font-bold text-indigo-600">$16.88</p>
+                                <div class="mt-3">
+                                    <input type="checkbox" id="checkbox-1" class="w-4 h-4 text-indigo-600" onchange="selectBook(1)">
+                                    <span class="ml-2 text-sm">Add to my order</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Book 2 -->
+                        <div id="book-2" class="book-card border-2 rounded-lg p-4 cursor-pointer transition-all border-gray-200 bg-white hover:border-gray-300" onclick="selectBook(2)">
+                            <div class="text-center">
+                                <div class="text-4xl mb-3">💕</div>
+                                <div class="text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full mb-2 inline-block">
+                                    Couples Workbook
+                                </div>
+                                <h3 class="font-semibold text-sm text-gray-900 mb-1 leading-tight">Long Division: The Journey From One to Oneness - Couples Workbook</h3>
+                                <p class="text-xs text-gray-600 mb-3">by Kevin D. Franklin</p>
+                                <p class="text-lg font-bold text-indigo-600">$19.88</p>
+                                <div class="mt-3">
+                                    <input type="checkbox" id="checkbox-2" class="w-4 h-4 text-indigo-600" onchange="selectBook(2)">
+                                    <span class="ml-2 text-sm">Add to my order</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bundle -->
+                        <div id="book-3" class="book-card border-2 rounded-lg p-4 cursor-pointer transition-all relative border-gray-200 bg-white hover:border-gray-300 ring-2 ring-green-200" onclick="selectBook(3)">
+                            <div class="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-semibold savings-badge">
+                                Save $11.77
+                            </div>
+                            <div class="text-center">
+                                <div class="text-4xl mb-3">📚💕</div>
+                                <div class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full mb-2 inline-block">
+                                    Complete Bundle
+                                </div>
+                                <h3 class="font-semibold text-sm text-gray-900 mb-1 leading-tight">Long Division: Book + Couples Workbook Bundle</h3>
+                                <p class="text-xs text-gray-600 mb-3">by Kevin D. Franklin</p>
+                                <div class="mb-3">
+                                    <p class="text-xs text-gray-500 line-through mb-1">$36.76</p>
+                                    <p class="text-lg font-bold text-green-600">$24.99</p>
+                                </div>
+                                <div class="mt-3">
+                                    <input type="checkbox" id="checkbox-3" class="w-4 h-4 text-indigo-600" onchange="selectBook(3)">
+                                    <span class="ml-2 text-sm">Choose bundle</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                            What drew you to "Long Division"? (Optional)
+                        </label>
+                        <textarea
+                            id="preferences"
+                            name="preferences"
+                            rows="3"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                            placeholder="Share what interests you about this journey from one to oneness, relationship goals, or questions you hope to explore..."
+                        ></textarea>
+                    </div>
+                </div>
+
+                <!-- Payment Options -->
+                <div class="bg-gray-50 rounded-lg p-6 mb-8">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                        </svg>
+                        Payment Method
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <input
+                                type="radio"
+                                id="amazon-direct"
+                                name="paymentMethod"
+                                value="amazon-direct"
+                                checked
+                                class="w-4 h-4 text-indigo-600"
+                            />
+                            <label for="amazon-direct" class="ml-3">
+                                <span>Register now, buy Long Division books directly on Amazon</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Cost Summary -->
+                    <div class="mt-6 bg-white rounded-lg p-4 border border-gray-200">
+                        <h3 class="font-semibold text-gray-900 mb-3">Order Summary</h3>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span id="membership-label">Membership Fee (Long Division Book Club)</span>
+                                <span id="membership-cost">$0.00</span>
+                            </div>
+                            <div id="books-cost-row" class="flex justify-between" style="display: none;">
+                                <span id="books-label">Long Division Items (0)</span>
+                                <span id="books-cost">$0.00</span>
+                            </div>
+                            <div class="border-t pt-2 font-semibold flex justify-between">
+                                <span>Total</span>
+                                <span id="total-cost">$0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button
+                        type="submit"
+                        class="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors shadow-lg"
+                        id="submit-button"
+                    >
+                        Join Free Book Club
+                    </button>
+                    <p class="text-sm text-gray-600 mt-3">
+                        By registering, you agree to our Terms of Service and Privacy Policy
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
